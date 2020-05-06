@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Form results - Submitted user data</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+
+        <div class="results">
+
+            <h1>Thank you!</h1>
+
+            <p>The information you submitted has been received, thank you. We will get back to you as soon as possible.</p>
+
+            <h3>Your submitted data:</h3>
+
+            <div id="userdata"></div>
+
+            <p><a href="contact.html">Return to Contact page</a></p>
+
+        </div>
+
+        <script>
+            const dataList = document.getElementById("userdata")
+            new URLSearchParams(window.location.search).forEach((value, name) => {
+                dataList.append(`${name}: ${value}`)
+                dataList.append(document.createElement('br'))
+            })  
+
+        </script> 
+        
+                <footer class="footer2">
+
+                    <a href="sitemap.html"><p>Sitemap</p></a>
+
+                </footer>
+    
+        </body>
+    
+</html>
